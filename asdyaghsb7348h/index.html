@@ -285,6 +285,14 @@
 			color: #555;
 		}
 
+		/* === FIX: FORÇAR TODAS AS IMAGENS DO ARTIGO A RESPEITAREM A LARGURA === */
+		.today-article-content img,
+		.article-body img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+
 		/* Interview boxes - preserve original styling */
 		.today-article-content .interview-container {
 			margin: 24px 0;
@@ -470,6 +478,156 @@
 			line-height: 1.2;
 		}
 
+		/* === SPONSORED SECTION (usado no HTML) === */
+		.sponsored-section {
+			margin: 30px 0 10px;
+		}
+
+		.sponsored-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			border-bottom: 1px solid #e0e0e0;
+			padding-bottom: 10px;
+			margin-bottom: 20px;
+		}
+
+		.sponsored-header h3 {
+			font-size: 16px;
+			font-weight: 700;
+			font-style: italic;
+			color: #2a2a2a;
+			margin: 0;
+		}
+
+		.sponsored-header span {
+			font-size: 12px;
+			color: #999;
+		}
+
+		.sponsored-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 24px;
+		}
+
+		.sponsored-item {
+			display: block;
+			text-decoration: none !important;
+			color: inherit !important;
+			cursor: pointer;
+			transition: opacity 0.2s;
+		}
+
+		.sponsored-item:hover {
+			opacity: 0.85;
+		}
+
+		.sponsored-item img {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 16/9;
+			object-fit: cover;
+			display: block;
+		}
+
+		.sponsored-item p {
+			padding: 10px 0 0;
+			font-size: 14px;
+			line-height: 1.4;
+			color: #2a2a2a;
+			font-weight: 400;
+			margin: 0;
+		}
+
+		/* === INTERVIEW SECTION (usado no HTML) === */
+		.interview-section {
+			margin: 24px 0;
+		}
+
+		.interview-box {
+			padding: 20px 24px;
+			border-radius: 8px;
+			margin-bottom: 16px;
+		}
+
+		.interview-box.interviewer {
+			background: #eff6ff;
+			border-left: 4px solid #93c5fd;
+		}
+
+		.interview-box.guest {
+			background: #f0fdf4;
+			border-left: 4px solid #86efac;
+		}
+
+		.interview-box .speaker-name {
+			font-weight: 700;
+			font-size: 15px;
+			margin: 0 0 8px 0;
+		}
+
+		.interview-box.interviewer .speaker-name {
+			color: #1e40af;
+		}
+
+		.interview-box.guest .speaker-name {
+			color: #166534;
+		}
+
+		.interview-box .speaker-text {
+			font-size: 17px;
+			line-height: 1.7;
+			color: #2a2a2a;
+			margin: 0 0 12px 0;
+		}
+
+		.interview-box .speaker-text:last-child {
+			margin-bottom: 0;
+		}
+
+		/* === CTA SECTION (usado no HTML) === */
+		.cta-section {
+			text-align: center;
+			margin: 32px 0;
+		}
+
+		.cta-link {
+			display: block;
+			text-align: center;
+			font-size: 18px;
+			font-weight: 700;
+			color: #2563eb;
+			text-decoration: underline;
+			margin-bottom: 16px;
+		}
+
+		.cta-button {
+			display: inline-block;
+			background: #007cff;
+			color: #fff !important;
+			text-decoration: none !important;
+			font-weight: 700;
+			font-size: 18px;
+			padding: 14px 28px;
+			border-radius: 6px;
+			text-align: center;
+			width: 100%;
+			max-width: 500px;
+			box-sizing: border-box;
+		}
+
+		.article-blockquote {
+			border-left: 4px solid #e8e8e8;
+			margin: 24px 0;
+			padding: 16px 24px;
+			background: #fafafa;
+			font-style: italic;
+			color: #555;
+			font-size: 17px;
+			line-height: 1.7;
+		}
+
 		/* Mobile responsive */
 		@media (max-width: 768px) {
 			.today-nav-mobile {
@@ -555,6 +713,28 @@
 
 			.food-item img {
 				max-height: 280px;
+			}
+
+			.sponsored-grid {
+				grid-template-columns: 1fr;
+				gap: 20px;
+			}
+
+			.sponsored-item {
+				border-bottom: 1px solid #e8e8e8;
+				padding-bottom: 20px;
+			}
+
+			.sponsored-item:last-child {
+				border-bottom: none;
+			}
+
+			.interview-box {
+				padding: 16px;
+			}
+
+			.interview-box .speaker-text {
+				font-size: 16px;
 			}
 		}
 
@@ -883,7 +1063,7 @@
 		<div class="content-main-col">
 	<div class="today-article-content">
 			<div class="article-body">
-				<img src="./Morgan Freeman Breaks Silence on Alzheimer's Battle in Exclusive 60 Minutes Special_files/hero.webp" alt="Morgan Freeman 60 Minutes Special" style="border-radius:4px; margin-bottom:24px;">
+				<img src="./Morgan Freeman Breaks Silence on Alzheimer's Battle in Exclusive 60 Minutes Special_files/hero.webp" alt="Morgan Freeman 60 Minutes Special" style="width:100%; height:auto; border-radius:4px; margin-bottom:24px;">
 
 				<p>In one of the most watched 60 Minutes episodes of the year, <b>Morgan Freeman</b> sat down to reveal something he had kept private for years.</p>
 
@@ -975,7 +1155,7 @@
 				<div class="cta-section">
 					<a href="https://begin.infoworld-today24.com/preclick?clickid=69e8f302fc07e0c875f92878&amp;rtkck=1776889196" class="cta-link">Click the link to check out the step-by-step!</a>
 					<a href="https://begin.infoworld-today24.com/preclick?clickid=69e8f302fc07e0c875f92878&amp;rtkck=1776889196" style="text-decoration:none; display:block;">
-						<img src="./Morgan Freeman Breaks Silence on Alzheimer's Battle in Exclusive 60 Minutes Special_files/video-thumbnail.webp" alt="Click to Watch the Special Episode" style="width:100%; border-radius:4px;">
+						<img src="./Morgan Freeman Breaks Silence on Alzheimer's Battle in Exclusive 60 Minutes Special_files/video-thumbnail.webp" alt="Click to Watch the Special Episode" style="width:100%; height:auto; border-radius:4px;">
 					</a>
 				</div>
 
