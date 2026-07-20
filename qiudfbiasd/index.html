@@ -17,7 +17,7 @@
     atualizarTitulo();
     setInterval(atualizarTitulo, 1000);
   });</script> <meta content="Elementor 4.0.3; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap" name="generator"><link href="images/cropped-favicon-32x32.webp" rel="icon"><link href="images/cropped-favicon-192x192.webp" rel="icon"><link href="images/cropped-favicon-180x180.webp" rel="apple-touch-icon"><meta content="images/cropped-favicon-270x270.webp" name="msapplication-TileImage"><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"><script async="" src="js/player_1.js"></script><style id="fix-vsl-box">
-// ===== VSL overlap: SO MOBILE. Desktop nao recebe nada. 
+/* ===== VSL overlap: SO MOBILE. Desktop nao recebe nada. ===== */
 @media (max-width:767px){
   /* Baixa o stacking do bloco da VSL sem cortar o conteudo dele. */
   .elementor-element-5a1f4ea{
@@ -33,7 +33,7 @@
     min-height:0!important;
     overflow:visible!important;
   }
-   Reserva o espaco da VSL no fluxo; o smartplayer precisa ficar visivel, nao absoluto/clipado. 
+  /* Reserva o espaco da VSL no fluxo; o smartplayer precisa ficar visivel, nao absoluto/clipado. */
   .vslx{
     position:relative!important;
     display:block!important;
@@ -376,8 +376,8 @@ document.addEventListener('click', clicar, {once: true});</script> </div></div><
 .pw-freeship{text-align:center;font-size:13px;font-weight:800;color:#111;margin-top:8px;}
 .pw-freeship b{color:var(--pw-green-b);}
 @media (max-width:820px){
-  /* AJUSTE AQUI: aumente/diminua o padding-top para descer ou subir o 1o card no mobile */
-  .pw-pricing{padding-top:110px;}
+  /* Se ainda faltar respiro no topo do 1o card, descomente e ajuste o valor: */
+  /* .pw-pricing{padding-top:80px;} */
   .pw-grid{grid-template-columns:1fr;max-width:420px;gap:26px;}
   .pw-card.pw-featured{transform:none;}
 }
