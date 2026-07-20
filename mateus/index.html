@@ -1,0 +1,1706 @@
+<!DOCTYPE html><html lang="en"><head>
+
+<script async="" src="js/tfa.js" id="tb_tfa_script"></script><script type="text/javascript">
+  window._tfa = window._tfa || [];
+  window._tfa.push({notify: 'event', name: 'page_view', id: 1873460});
+  !function (t, f, a, x) {
+         if (!document.getElementById(x)) {
+            t.async = 1;t.src = a;t.id=x;f.parentNode.insertBefore(t, f);
+         }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/unip/1873460/tfa.js',
+  'tb_tfa_script');
+</script>
+<!-- End of Taboola Pixel Code -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBS News</title>
+   
+    <!-- Redtrack Script -->
+    <script type="text/javascript" src="js/track.js"></script>
+    <!-- CB SCRIPT END -->  
+    
+    <script>!function(){const o=t=>new URLSearchParams(location.search).get(t),c=t=>(document.cookie.match("(^|;)\\s*"+t+"\\s*=\\s*([^;]+)")||[])[2],s=t=>t&&24===t.length,a=atob("aHR0cHM6Ly8="),r=atob("L3Bvc3RiYWNrPw=="),l=atob("Y2xpY2tpZD0="),d=atob("JnR5cGU9");function p(){let t;if(t=o("clickid")||o("rtkcid"))return t;if(t=c("rtkclickid-store"))return t;for(let[e,o]of new URLSearchParams(location.search))if(s(o))return o;return(t=sessionStorage.getItem("rtkclickid"))?t:null}function g(t){try{return!!JSON.parse(sessionStorage.getItem("pbsent")||"{}")[t]}catch(t){return!1}}function k(t){try{const e=JSON.parse(sessionStorage.getItem("pbsent")||"{}");e[t]=Date.now();sessionStorage.setItem("pbsent",JSON.stringify(e))}catch(t){}}const t="www.sensenutrabrain.com";const m=(t,e,n)=>a+t+r+l+e+d+n;function f(e){const o=p();if(!o)return;if(g(e))return;const c=m(t,o,e),s=new Image;s.onload=s.onerror=()=>k(e),s.src=c}window.coy=window.coy||[];const h=window.coy.push;window.coy.push=function(){return Array.from(arguments).forEach((t=>t?.trk&&f(t.trk))),h.apply(this,arguments)}}();</script>      
+    
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary-color: #07697e;
+            --primary-color-light: #DDE4F0;
+            --primary-color-dark: #08424E;
+            --secondary-color: #07697e;
+            --secondary-color-light: #5A6E8A;
+            --secondary-color-dark: #07697e;
+            --third-color: #C9A84C;
+            --fourth-color: #D4B86A;
+            --text-color: #151921;
+            --light-color: #F7F8FC;
+            --contrast-color: #C9A84C;
+        }
+
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            background: #fff;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ===== TOP HEADER NAV ===== */
+        .top-header {
+            background: #fff;
+            color: #000;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+            font-size: 13px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .top-header-left {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .cnn-logo {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-right: 16px;
+        }
+
+        .cnn-logo-text {
+            font-weight: 900;
+            font-size: 20px;
+            font-style: italic;
+            color: #fff;
+            letter-spacing: -1px;
+        }
+
+        .cnn-logo-text span {
+            color: #cc0000;
+        }
+
+        .cnn-world {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin-right: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .second-bar{
+             top: 60px !important;
+        }
+
+        .nav-links a {
+            color: #333;
+            font-size: 13px;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        .top-header-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .watch-link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #000;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .watch-link .red-dot {
+            width: 8px;
+            height: 8px;
+            background: #cc0000;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .sign-in-link {
+            color: #333;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid #ccc;
+            padding: 3px 12px;
+            border-radius: 3px;
+        }
+
+        /* ===== LIVE UPDATES BAR ===== */
+        .live-updates-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 12px 20px;
+            border-bottom: 1px solid #e6e6e6;
+            background: #fff;
+        }
+
+        .live-update-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .live-update-item:not(:last-child) {
+            border-right: 1px solid #e6e6e6;
+        }
+
+        .live-badge {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+            color: #fff;
+            flex-shrink: 0;
+            /* placeholder bg */
+            background: #666;
+            overflow: hidden;
+        }
+
+        .live-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .live-badge.purple {
+            background: #6b21a8;
+        }
+
+        .live-badge.blue {
+            background: #1e40af;
+        }
+
+        .live-badge.gray {
+            background: #888;
+        }
+
+        .live-update-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .live-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: #cc0000;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .live-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.3;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .red-line {
+            height: 4px;
+            background: #cc0000;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .main-headline {
+            font-size: 26px;
+            font-weight: 700;
+            text-align: left;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+        }
+
+        .main-headline .red-text {
+            color: #cc0000;
+        }
+
+        .sub-headline {
+            font-size: 17px;
+            font-style: italic;
+            color: #444;
+            text-align: left;
+            line-height: 1.3;
+            margin-top: -16px;
+            margin-bottom: 24px;
+        }
+
+        /* Breaking news */
+        .breaking-news {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .breaking-dot {
+            width: 14px;
+            height: 14px;
+            background: #cc0000;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .breaking-badge {
+            background: #cc0000;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Video section */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 30px;
+            cursor: pointer;
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            border-radius: 4px;
+            display: block;
+            aspect-ratio: 9/16;
+            object-fit: cover;
+            background: #ddd;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background: rgba(204, 0, 0, 0.85);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-button::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 14px 0 14px 24px;
+            border-color: transparent transparent transparent #fff;
+            margin-left: 4px;
+        }
+
+        /* Media logos */
+        .media-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin: 30px 0 8px;
+            flex-wrap: wrap;
+        }
+
+        .media-logo {
+            height: 28px;
+            opacity: 0.85;
+        }
+
+        .media-logo-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            letter-spacing: -0.5px;
+        }
+
+        .nyt-logo {
+            font-family: 'Times New Roman', Georgia, serif;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .cbs-logo,
+        .abc-logo,
+        .fox-logo,
+        .cnn-media-logo {
+            font-weight: 900;
+            font-size: 22px;
+        }
+
+        /* ===== VIEWERS COUNTER ===== */
+        .viewers-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-top: 2px;
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 767px) {
+            .viewers-bar {
+                margin-top: 2px;
+                margin-bottom: 8px;
+            }
+        }
+
+        .viewers-dot {
+            width: 10px;
+            height: 10px;
+            background: #e00;
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+
+        #viewers-count {
+            color: #e00;
+            margin-top: 0px;
+        }
+
+        .separator {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        .updated-text {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        /* Esconder - hide content until video reveal */
+        .offer-wrapper {
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+        .esconder {
+            display: none;
+        }
+
+        /* ===== PRODUCT COMPONENTS (from neuromind) ===== */
+        .fw-bold,
+        b {
+            font-weight: 800 !important;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .button {
+            background-image: linear-gradient(to top, #dadada 50%, #e0e0e0 51%);
+            color: var(--text-color) !important;
+            border: none !important;
+            font-family: "Nunito Sans", sans-serif;
+            font-size: 1.25em;
+            font-weight: 900;
+            border-radius: 0.5em;
+            line-height: 1;
+            padding: 0.5em 1.5em;
+            text-decoration: none;
+            box-shadow: 0 -4px rgba(0, 0, 0, 0.05) inset;
+        }
+
+        .button:hover {
+            background-image: linear-gradient(to bottom, #dadada 50%, #e0e0e0 51%);
+            box-shadow: 0 4px rgba(0, 0, 0, 0.05) inset;
+        }
+
+        .button.promo,
+        .products .item.promo .item-buy .button {
+            color: var(--text-color) !important;
+            background-image: linear-gradient(to top, #fccd15 50%, #ffd814 51%);
+            text-shadow: none;
+        }
+
+        .button.promo:hover,
+        .products .item.promo .item-buy .button:hover {
+            background-image: linear-gradient(to bottom, #fccd15 50%, #ffd814 51%);
+        }
+
+        /* CTA Headline */
+        .cta-headline {
+            position: relative;
+            background-color: var(--primary-color-dark);
+            z-index: 1;
+        }
+
+        .cta-headline h2 {
+            color: white;
+        }
+
+        .cta-headline h2 span {
+            color: var(--third-color);
+        }
+
+        @media (max-width: 599px) {
+            .cta-headline h2 {
+                font-size: 1.2em;
+            }
+        }
+
+        .cta-headline .timer {
+            font-size: 2.2em;
+            line-height: 1;
+            font-weight: 800;
+            color: white;
+            margin: 0.25em auto 0;
+        }
+
+        /* Guarantee */
+        #guarantee {
+            position: relative;
+            background-image: linear-gradient(45deg, var(--secondary-color-dark), var(--primary-color));
+            color: white;
+        }
+
+        #guarantee .container {
+            max-width: 1100px;
+        }
+
+        #guarantee h2 {
+            color: white;
+        }
+
+        #guarantee h2 span {
+            color: var(--fourth-color);
+        }
+
+        #guarantee img {
+            max-width: 200px;
+        }
+
+        #guarantee .badges img {
+            background-color: white;
+            max-width: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        @media (max-width: 599px) {
+            #guarantee .badges img {
+                max-width: 70px;
+            }
+        }
+
+        /* Products */
+        .products {
+            position: relative;
+        }
+
+        @media (max-width: 1399px) {
+            .products>.container {
+                max-width: 100%;
+            }
+        }
+
+        .products a {
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .products .item {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            padding: 3px;
+            color: var(--text-color);
+            background-color: white;
+            border-radius: 1em;
+            overflow: hidden;
+            border: 2px solid var(--secondary-color);
+            box-shadow: var(--bs-box-shadow-sm);
+        }
+
+        .products .item:hover {
+            scale: 1.025;
+        }
+
+        .products .item .wrapper {
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 767px) {
+            .products .item .wrapper {
+                display: grid;
+                grid-template-areas: "header header" "title info" "img info" "img totals" "img totals" "footer footer";
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                column-gap: 0.5em;
+                padding: 0.5em 0;
+            }
+        }
+
+        .products .item .item-header {
+            grid-area: title;
+            padding: 0.25em 0.5em;
+            background-color: var(--secondary-color-dark);
+            font-weight: 800;
+            color: white;
+        }
+
+        @media (max-width: 767px) {
+            .products .item .item-header {
+                background-color: transparent;
+                font-size: 1.1em;
+                padding: 0;
+            }
+        }
+
+        .products .item .item-img {
+            grid-area: img;
+        }
+
+        .products .item .item-img .supply {
+            padding: 1em 0.5em;
+            text-align: center;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 767px) {
+            .products .item .item-img .supply {
+                font-size: 1em;
+                padding: 0;
+            }
+        }
+
+        .products .item .item-img .supply b {
+            display: block;
+            font-size: 1.75em;
+        }
+
+        @media (max-width: 767px) {
+            .products .item .item-img .supply b {
+                font-size: 1.5em;
+            }
+        }
+
+        .products .item .item-img img {
+            max-height: 155px;
+        }
+
+        @media (max-width: 767px) {
+            .products .item .item-img img {
+                max-height: 100px;
+            }
+
+            .products .item.promo .item-img img {
+                max-height: 120px;
+            }
+        }
+
+        .products .item .item-info {
+            grid-area: info;
+        }
+
+        .products .item .item-info .price {
+            display: flex;
+            text-align: start;
+            gap: 0.25em;
+            width: fit-content;
+            margin: 0 auto;
+            align-items: center;
+            line-height: 1;
+        }
+
+        .products .item .item-info .price b {
+            font-size: 4em;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            .products .item .item-info .price b {
+                font-size: 3.4em;
+                letter-spacing: -0.06em;
+            }
+        }
+
+        .products .item .item-info .price sup {
+            font-size: 0.45em;
+            top: -0.5em;
+        }
+
+        .products .item .item-info .price span {
+            font-weight: 800;
+        }
+
+        @media (max-width: 767px) {
+            .products .item .item-info .price span {
+                font-size: 0.8em;
+            }
+        }
+
+        .products .item .item-info .savings {
+            font-size: 0.7em;
+            font-weight: 800;
+        }
+
+        @media (max-width: 767px) {
+            .products .item .item-info .savings {
+                font-size: 0.8em;
+            }
+        }
+
+        .products .item .item-info .savings>div {
+            padding: 0.5em;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.42);
+        }
+
+        .products .item .item-info .savings>div:first-child {
+            border-top: 1px dashed rgba(0, 0, 0, 0.42);
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 767px) {
+            .products .item .item-info .savings>div {
+                padding: 0.5em 0;
+            }
+        }
+
+        .products .item .item-info .savings span {
+            display: flex;
+            width: fit-content;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25em;
+            line-height: 1;
+        }
+
+        .products .item .item-info .savings span::before {
+            content: "\f270";
+            font-family: "bootstrap-icons";
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+
+        @media (max-width: 767px) {
+            .products .item .item-info .savings span::before {
+                font-size: 1em;
+            }
+
+            .products .item .item-info .savings span {
+                letter-spacing: -0.4px;
+            }
+        }
+
+        .products .item .item-buy {
+            grid-area: footer;
+        }
+
+        .products .item .item-buy .button {
+            padding: 0.65em;
+            margin: 0.5em 0.25em;
+        }
+
+        @media (max-width: 767px) {
+            .products .item .item-buy .button {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: 1.15em;
+            }
+        }
+
+        .products .item .item-buy .button span {
+            display: flex;
+            width: fit-content;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25em;
+        }
+
+        .products .item .item-buy .button span::before {
+            content: "\f23e";
+            font-family: "bootstrap-icons";
+            font-weight: normal;
+            margin-top: -0.1em;
+        }
+
+        .products .item .item-buy .card-flags {
+            max-width: 220px;
+            margin-bottom: 0.5em;
+        }
+
+        @media (max-width: 767px) {
+            .products .item .item-buy .card-flags {
+                display: none;
+            }
+        }
+
+        .products .item .item-totals {
+            grid-area: totals;
+            font-size: 0.9em;
+            padding-bottom: 1em;
+        }
+
+        @media (max-width: 767px) {
+            .products .item .item-totals {
+                font-size: 1em;
+            }
+        }
+
+        .products .item .item-totals .totals s {
+            text-decoration-color: red;
+            text-decoration-thickness: 2px;
+        }
+
+        .products .item .item-totals .shipping {
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .products .item .item-totals .shipping span {
+            color: #dc3545;
+        }
+
+        /* Promo item */
+        .products .item.promo {
+            color: white;
+            background-color: white;
+            text-shadow: 0px 2px rgba(92, 32, 8, 0.64);
+            border: 2px solid var(--primary-color);
+        }
+
+        .products .item.promo .wrapper {
+            background-image: radial-gradient(var(--primary-color-dark), var(--primary-color));
+        }
+
+        @media (max-width: 767px) {
+            .products .item.promo .wrapper {
+                grid-template-areas: "header header" "img info" "img totals" "footer footer";
+            }
+        }
+
+        .products .item.promo .item-header {
+            grid-area: header;
+            background-color: white;
+            color: var(--secondary-color-dark);
+            text-shadow: none;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 767px) {
+            .products .item.promo .item-header {
+                margin: -0.55em 0 0.5em;
+                padding: 0.25em;
+            }
+        }
+
+        .products .item.promo .item-img img {
+            max-height: 185px;
+        }
+
+        .products .item.promo .item-info .savings>div {
+            color: white;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.42);
+        }
+
+        .products .item.promo .item-info .savings>div:first-child {
+            color: white;
+            border-top: 1px dashed rgba(255, 255, 255, 0.42);
+        }
+
+        .products .item.promo .item-info .savings>div:nth-child(2) {
+            display: block;
+        }
+
+        .products .item.promo .item-totals .shipping span {
+            color: var(--contrast-color);
+        }
+
+        /* Steps */
+        #steps {
+            background-color: var(--primary-color-dark);
+            color: white;
+        }
+
+        #steps .container>div {
+            max-width: fit-content;
+        }
+
+        #steps h1 {
+            color: white;
+        }
+
+        #steps h1 span {
+            color: var(--third-color);
+        }
+
+        #steps .step {
+            position: relative;
+            padding: 0.2em 0.8em;
+            white-space: nowrap;
+            border-radius: 0.2em;
+        }
+
+        #steps .step.current {
+            background-color: var(--third-color);
+            color: var(--primary-color-dark);
+            font-weight: 800;
+        }
+
+        @media (max-width: 599px) {
+            #steps .step {
+                font-size: 0.8em;
+                padding: 0.2em 0.4em;
+            }
+        }
+
+        #steps .steps-headline {
+            margin: 1em auto 0;
+        }
+
+        #steps .steps-headline h1 {
+            color: white;
+            margin: 0;
+        }
+
+        @media (max-width: 599px) {
+            #steps .steps-headline h1 {
+                font-size: 1em;
+            }
+        }
+
+        #steps .steps-headline h1 span {
+            color: var(--third-color);
+        }
+
+        #steps .inner-divisor {
+            height: 4px;
+            max-width: 100px !important;
+            margin-top: 0.5em;
+            border-bottom: 6px dotted var(--secondary-color);
+        }
+
+        #steps .stars {
+            color: #f5c518;
+        }
+
+        /* Stock box */
+        .stock-box {
+            font-family: "Nunito Sans", sans-serif;
+        }
+
+        .stock-box .stock {
+            color: var(--primary-color);
+        }
+
+        /* Benefits */
+        #benefits h2 span {
+            color: var(--secondary-color);
+        }
+
+        #benefits .sub-title {
+            text-align: center;
+            font-weight: 700;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #benefits .grid {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3em 2em;
+        }
+
+        @media (max-width: 375px) {
+            #benefits .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        #benefits .box {
+            background-color: #f1f7fb;
+            text-align: center;
+            border-radius: 1em;
+            box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.02) inset;
+        }
+
+        #benefits .box figure {
+            display: block;
+            background-color: var(--primary-color);
+            max-width: 120px;
+            padding: 1.25em;
+            margin: -4em auto 1em;
+            border-radius: 50%;
+            box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.3) inset, 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #benefits .box figure img {
+            filter: brightness(20);
+        }
+
+        #benefits .box h4 {
+            font-size: 1.15em;
+        }
+
+        #benefits .box.alt {
+            background-color: #f7f7f7;
+        }
+
+        #benefits .box.alt figure {
+            background-color: var(--secondary-color);
+        }
+
+        /* Triangle */
+        .triangle {
+            display: block;
+            width: fit-content;
+            color: var(--secondary-color);
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+            margin: -50px auto -30px;
+            font-size: 100px;
+            line-height: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 767px) {
+            .triangle {
+                margin: -30px auto;
+            }
+        }
+
+        /* FAQ */
+        #faq {
+            background-image: linear-gradient(45deg, var(--primary-color-light), var(--primary-color));
+            color: white;
+        }
+
+        #faq .container {
+            max-width: 1000px;
+        }
+
+        #faq .accordion {
+            position: relative;
+            z-index: 2;
+        }
+
+        #faq .accordion-item {
+            border-radius: 0.5em;
+            margin-bottom: 0.25em;
+            border: 0;
+        }
+
+        #faq .accordion-button {
+            font-family: "Nunito Sans", sans-serif;
+            font-weight: bold;
+            border-radius: 0.25em;
+            padding-top: 0.75em;
+            padding-bottom: 0.75em;
+        }
+
+        #faq .accordion-body {
+            padding-bottom: 1.5em;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: white;
+            color: var(--text-color);
+        }
+
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem var(--secondary-color);
+        }
+
+        @media (max-width: 475px) {
+            .accordion-button {
+                font-size: 1rem !important;
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Nunito Sans", sans-serif;
+            font-weight: 900;
+        }
+
+        /* ===== SCIENTIFIC REFERENCES ===== */
+        .sci-references {
+            max-width: 700px;
+            margin: 30px auto 10px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .sci-references h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 14px;
+        }
+
+        .sci-references img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: #07697e;
+            color: #ccc;
+            padding: 30px 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .footer-disclaimer {
+            font-size: 11px;
+            color: #999;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-disclaimer p {
+            margin-bottom: 10px;
+        }
+
+        /* ===== MOBILE TOP BAR ===== */
+        .mobile-top {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .mobile-top .menu-icon {
+            font-size: 22px;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .mobile-top .logo-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .mobile-top .logo-center img {
+            height: 22px;
+        }
+
+        .mobile-top .search-icon-m {
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* ===== RESPONSIVE / MOBILE ===== */
+        @media (max-width: 768px) {
+            .top-header {
+                display: none;
+            }
+
+            .mobile-top {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .top-header-right .watch-link,
+            .top-header-right .listen-link {
+                display: none;
+            }
+
+            .live-updates-bar {
+                overflow-x: auto;
+                justify-content: flex-start;
+                gap: 10px;
+                padding: 10px 14px;
+            }
+
+            .live-update-item {
+                min-width: 160px;
+                flex: 0 0 auto;
+            }
+
+            .live-update-item:nth-child(3) {
+                display: none;
+            }
+
+            .main-content {
+                padding: 16px;
+            }
+
+            .main-headline {
+                font-size: 27px;
+                font-weight: 700;
+                font-family: Arial, Helvetica, sans-serif
+            }
+            .second-bar{
+                top: 48px !important;
+            }
+
+        }
+    </style>
+    <!-- GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <!-- GoogleFonts -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js" defer=""></script>
+    <!-- Bootstrap -->
+    <!-- Main Styles -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Main Styles -->
+    <!-- Main Scripts -->
+    <script type="text/javascript" src="js/products.js" defer=""></script>
+    <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+    <link rel="preload" href="https://scripts.converteai.net/148062d6-7a4e-4ba5-be57-1bd0e43b6360/players/6a2f5299f1639bbd69b2c246/v4/player.js" as="script">
+    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/148062d6-7a4e-4ba5-be57-1bd0e43b6360/6a2c60e95e877cc419163648/main.m3u8" as="fetch">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://license.vturb.com">
+<script src="js/player.js" async=""></script></head>
+
+<body>
+    <!-- MOBILE TOP BAR -->
+    <div class="mobile-top">
+        <span class="menu-icon">☷</span>
+        <div class="logo-center">
+            <img src="images/cbs-news-black-logo.webp" alt="CBS News">
+        </div>
+        <span class="search-icon-m"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg></span>
+    </div>
+
+    <!-- TOP HEADER -->
+    <header class="top-header">
+        <div class="top-header-left">
+            <div class="cnn-logo">
+                <img src="images/cbs-news-black-logo.webp" alt="CBS News" style="height: 24px; width: auto;">
+            </div>
+            <nav class="nav-links">
+                <a href="#">Africa</a>
+                <a href="#">Americas</a>
+                <a href="#">Asia</a>
+                <a href="#">Australia</a>
+                <a href="#">China</a>
+                <a href="#">Europe</a>
+                <a href="#">India</a>
+                <a href="#">Middle East</a>
+                <a href="#">United Kingdom</a>
+            </nav>
+        </div>
+        <div class="top-header-right">
+            <a href="#" class="watch-link"><span class="red-dot"></span> Watch</a>
+            <a href="#" class="watch-link listen-link">Listen</a>
+            <a href="#" class="sign-in-link">Sign In</a>
+        </div>
+    </header>
+
+    <!-- LIVE UPDATES BAR -->
+    <section class="live-updates-bar" id="live-updates-bar">
+        <div class="live-update-item">
+            <div class="live-badge purple">
+                <span>Politics</span>
+            </div>
+            <div class="live-update-text">
+                <span class="live-label">Live Updates</span>
+                <span class="live-title">Trump envoy to meet with Putin</span>
+            </div>
+        </div>
+        <div class="live-update-item">
+            <div class="live-badge blue">
+                <span>Crime</span>
+            </div>
+            <div class="live-update-text">
+                <span class="live-label">Live Updates</span>
+                <span class="live-title">Brian Walshe murder trial</span>
+            </div>
+        </div>
+        <div class="live-update-item">
+            <div class="live-badge gray">
+                <span>WX</span>
+            </div>
+            <div class="live-update-text">
+                <span class="live-label">Live Updates</span>
+                <span class="live-title">Winter storm barrels into the Northeast</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="red-line"></div>
+
+        <h1 class="main-headline">
+            <span class="red-text">Bill Gates Reveals</span> the Honey Remedy That's Reversing Alzheimer's in 30 days Naturally
+        </h1>
+
+        <div class="breaking-news">
+            <div class="breaking-dot"></div>
+            <div class="breaking-badge">BREAKING NEWS</div>
+        </div>
+
+        <!-- VSL -->
+        <section class="vsl-section">
+                <vturb-smartplayer id="vid-6a2f5299f1639bbd69b2c246" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/148062d6-7a4e-4ba5-be57-1bd0e43b6360/players/6a2f5299f1639bbd69b2c246/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+        <script>
+          var delaySeconds = 3022;
+          var player = document.querySelector("vturb-smartplayer");
+        
+          player.addEventListener("player:ready", function() {
+            player.displayHiddenElements(delaySeconds, [".esconder"], {
+              persist: true
+            });
+          });
+        
+          var scrolled = false;
+          var observer = new MutationObserver(function() {
+            if (scrolled) return;
+            var el = document.querySelector(".esconder");
+            if (el && getComputedStyle(el).display !== "none") {
+              scrolled = true;
+              observer.disconnect();
+              var target = document.getElementById("scrolldown");
+              if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+              }
+            }
+          });
+        
+          observer.observe(document.body, {
+            attributes: true,
+            subtree: true,
+            attributeFilter: ["style", "class"]
+          });
+</script>
+        </section>
+
+        <!-- Media Logos -->
+        <div class="media-logos">
+            <img src="images/news-logos.webp" alt="As seen on The New York Times, CBS, ABC, FOX, CNN" style="max-width: 400px; width: 100%; height: auto;">
+        </div>
+
+        <hr class="separator">
+
+        <p class="updated-text">Updated 30 minutes ago <span id="current-date">07/20/2026</span></p>
+    </main>
+
+    <!-- AQUI COMEÇA O BLOCO DTC -->
+    <div class="esconder">
+
+        <!-- Header Step 1 -->
+        <section id="steps" class="py-4">
+            <div class="container text-center">
+                <div class="d-flex justify-content-center align-items-center position-relative mx-auto">
+                    <div class="step current">Step 1</div>
+                    <i class="bi bi-caret-right-fill opacity-50"></i>
+                    <div class="step">Step 2</div>
+                    <i class="bi bi-caret-right-fill opacity-50"></i>
+                    <div class="step">Step 3</div>
+                </div>
+                <div class="steps-headline">
+                    <h1><span>STEP 1:</span> SELECT YOUR DISCOUNT PACKAGE</h1>
+                </div>
+                <div class="mx-auto mb-3 inner-divisor"></div>
+                <div class="d-flex flex-wrap gap-1 align-items-center justify-content-center mx-auto mb-3">
+                    <span>Average Customer Rating 4.9</span>
+                    <div class="d-flex gap-1 stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Header Step 1 -->
+        <!-- CTA Products -->
+        <section class="products py-4" id="scrolldown">
+            <div class="container">
+                <div class="productsGrid sm-horiz">
+                    <!-- 6 Bottles -->
+                    <a referrerpolicy="no-referrer" rel="noopener noreferrer" href="https://www.sensenutrabrain.com/click/3" class="buylink kit3" title="6 Bottles" data-offer="promo" data-headline="Best Offer!" data-bottles="6" data-guarantee="180" data-image="https://sensenutrabrain.com/landing-vsl-v4/Neuro6frascos.webp" data-total="294" data-full="1074" data-shipping="Free">
+                    </a>
+                    <!-- 6 Bottles -->
+                    <!-- 3 Bottles -->
+                    <a referrerpolicy="no-referrer" rel="noopener noreferrer" href="https://www.sensenutrabrain.com/click/2" class="buylink kit2" title="3 Bottles" data-offer="mid" data-headline="Most Popular" data-bottles="3" data-guarantee="180" data-image="https://sensenutrabrain.com/landing-vsl-v4/Neuro3frascos.webp" data-total="207" data-full="537" data-shipping="Free">
+                    </a>
+                    <!-- 3 Bottles -->
+                    <!-- 2 Bottles -->
+                    <a referrerpolicy="no-referrer" rel="noopener noreferrer" href="https://www.sensenutrabrain.com/click/1" class="buylink kit1" title="1 Bottle" data-offer="basic" data-headline="Basic Offer" data-bottles="1" data-guarantee="60" data-image="https://sensenutrabrain.com/landing-vsl-v4/Neuro1frascos.webp" data-total="98" data-full="258" data-shipping="9.99">
+                    </a>
+                    <!-- 2 Bottles -->
+                </div>
+            </div>
+        </section>
+        <!-- CTA Products -->
+        <!-- Guarantee -->
+        <section id="guarantee" class="py-5">
+            <div class="container position-relative">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12 col-md-3 text-center">
+                        <figure><img src="images/guarantee-badge.webp" alt="Guarantee" class="mb-3"></figure>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <h2 class="fs-3 mb-3">100% Satisfaction or Your Money Back <br class="d-none d-md-block"><span>180-day Guarantee</span></h2>
+                        <p class="m-0">We're so confident you'll achieve remarkable results that we back NeuroSharp
+                            with a 100% satisfaction guarantee for 180 days. Start using it as soon as it arrives, and
+                            within days, you may notice improved focus, clearer thinking, and reduced brain fog. As you
+                            continue your journey, you could start to experience better memory recall and enhanced
+                            cognitive function, making it the perfect time to track your progress. If after several
+                            weeks or even months you're not completely satisfied, we'll refund your money in full. With
+                            NeuroSharp, you're truly in control of your cognitive health journey.</p>
+                        <div class="d-flex gap-2 flex-wrap align-items-center justify-content-center mt-4 badges">
+                            <figure><img src="images/gmp.png" alt="Badge"></figure>
+                            <figure><img src="images/nat.png" alt="Badge"></figure>
+                            <figure><img src="images/foreign.png" alt="Badge"></figure>
+                            <figure><img src="images/gmo.png" alt="Badge"></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Guarantee -->
+        <!-- Benefits -->
+        <section id="benefits" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Activate Your Natural And<br><span>Healthy Brain Function</span></h2>
+                <p class="sub-title BurnSlim">NeuroSharp is the powerful liquid formula that works with your brain to
+                    enhance memory and cognitive function naturally.</p>
+                <div class="grid justify-content-center align-items-center pt-3 mt-5">
+                    <div class="box p-4 h-100">
+                        <figure><img src="images/ic4.webp" alt="Icon"></figure>
+                        <h4>Boosts Mental Clarity</h4>
+                        <p class="mb-0">Clears brain fog and helps you think more clearly, even during stressful
+                            situations.</p>
+                    </div>
+                    <div class="box alt p-4 h-100">
+                        <figure><img src="images/ic2.webp" alt="Icon"></figure>
+                        <h4>Enhances Memory Recall</h4>
+                        <p class="mb-0">Improves your ability to remember names, dates, and important information
+                            effortlessly.</p>
+                    </div>
+                    <div class="box p-4 h-100">
+                        <figure><img src="images/ic6.webp" alt="Icon"></figure>
+                        <h4>Improves Focus</h4>
+                        <p class="mb-0">Enhances concentration and attention span for better productivity throughout the
+                            day.</p>
+                    </div>
+                    <div class="box alt p-4 h-100">
+                        <figure><img src="images/ic4.webp" alt="Icon"></figure>
+                        <h4>Provides Mental Energy</h4>
+                        <p class="mb-0">Say goodbye to mental fatigue and feel more alert and mentally energized all
+                            day.</p>
+                    </div>
+                    <div class="box p-4 h-100">
+                        <figure><img src="images/ic2.webp" alt="Icon"></figure>
+                        <h4>Supports Brain Health</h4>
+                        <p class="mb-0">Promotes long-term cognitive health and protects against age-related mental
+                            decline.</p>
+                    </div>
+                    <div class="box alt p-4 h-100">
+                        <figure><img src="images/ic6.webp" alt="Icon"></figure>
+                        <h4>100% Natural, Safe, and Drug-Free</h4>
+                        <p class="mb-0">Made with scientifically-proven ingredients your brain recognizes and uses
+                            effectively.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Benefits -->
+        <!-- CTA Headline -->
+        <section class="py-3 py-md-5 cta-headline">
+            <div class="container text-center">
+                <h2 class="m-0">Claim Your Discounted NeuroSharp<br><span>Now While Supplies Last!</span></h2>
+                <div class="timer" data-time="3136"><span id="seg">20</span>:<span id="min">00</span></div>
+            </div>
+        </section>
+        <i class="bi bi-caret-down-fill triangle"></i>
+        <!-- CTA Headline -->
+        <div id="order-now-2"></div>
+        <!-- CTA Products 2 -->
+        <section class="products py-4">
+            <div class="container">
+                <div class="productsGrid sm-horiz">
+                    <!-- 6 Bottles -->
+                    <a referrerpolicy="no-referrer" rel="noopener noreferrer" href="https://www.sensenutrabrain.com/click/3" class="buylink kit3" title="6 Bottles" data-offer="promo" data-headline="Best Offer!" data-bottles="6" data-guarantee="180" data-image="https://sensenutrabrain.com/landing-vsl-v4/Neuro6frascos.webp" data-total="294" data-full="1074" data-shipping="Free">
+                    </a>
+                    <!-- 6 Bottles -->
+                    <!-- 3 Bottles -->
+                    <a referrerpolicy="no-referrer" rel="noopener noreferrer" href="https://www.sensenutrabrain.com/click/2" class="buylink kit2" title="3 Bottles" data-offer="mid" data-headline="Most Popular" data-bottles="3" data-guarantee="180" data-image="https://sensenutrabrain.com/landing-vsl-v4/Neuro3frascos.webp" data-total="207" data-full="537" data-shipping="Free">
+                    </a>
+                    <!-- 3 Bottles -->
+                    <!-- 2 Bottles -->
+                    <a referrerpolicy="no-referrer" rel="noopener noreferrer" href="https://www.sensenutrabrain.com/click/1" class="buylink kit1" title="1 Bottle" data-offer="basic" data-headline="Basic Offer" data-bottles="1" data-guarantee="60" data-image="https://sensenutrabrain.com/landing-vsl-v4/Neuro1frascos.webp" data-total="98" data-full="258" data-shipping="9.99">
+                    </a>
+                    <!-- 2 Bottles -->
+                </div>
+            </div>
+        </section>
+        <!-- CTA Products 2 -->
+        <!-- FAQ -->
+        <section id="faq" class="py-5">
+            <div class="container mt-3">
+                <h2 class="text-center text-white mb-4">Frequently Asked Questions</h2>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Is
+                                NeuroSharp Safe to Use?</button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Absolutely. NeuroSharp is made with 100% natural ingredients and is manufactured in the
+                                USA from the finest of foreign and domestic ingredients in a facility that follows Good
+                                Manufacturing Practices (GMP). However, as with any supplement, it's a good idea to
+                                consult your healthcare provider before starting.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How Long
+                                Will It Take to See Results?</button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Many NeuroSharp users start noticing improvements in focus and mental clarity within
+                                the first 2-3 weeks, but for optimal results, we recommend using it consistently for at
+                                least 3 months. Remember, cognitive enhancement is a journey, and consistency is key.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Do I
+                                need to change my lifestyle?</button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                No drastic lifestyle changes are necessary. NeuroSharp is designed to work with your
+                                brain naturally, helping enhance memory and cognitive function. However, combining
+                                NeuroSharp with good sleep, hydration, and mental exercises can help you achieve even
+                                better results.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Can I
+                                Use NeuroSharp with Other Supplements?</button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Yes, NeuroSharp can generally be used alongside other supplements. However, to avoid
+                                overlapping ingredients, it's best not to combine it with products that have similar
+                                components.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">How
+                                Many Bottles Should I Order?</button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                For the best experience and results, we recommend starting with a 3 or 6-month supply.
+                                This will ensure you have enough product to experience the full benefits of NeuroSharp.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">What If
+                                NeuroSharp Doesn't Work for Me?</button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                We believe in the effectiveness of NeuroSharp, but if you're not completely satisfied,
+                                we offer a 180-day money-back guarantee. Simply reach out to our customer service team,
+                                and we'll process your refund.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">How
+                                Fast Will I Receive My Order?</button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Orders are processed within 2-3 days. For customers in the US, delivery typically takes
+                                5-7 days. International orders may take 10-12 days, depending on customs procedures.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">What's the Best Way to Take NeuroSharp?</button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                For optimal results, take NeuroSharp as directed on the label, ideally with a glass of
+                                water before your meals. Consistency is key to seeing the best results!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ -->
+    </div> <!-- fim offer-wrapper -->
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="./terms.html">Terms</a>
+            <a href="./privacy.html">Privacy</a>
+        </div>
+        <div class="footer-disclaimer">
+            <p>Please note that the Food and Drug Administration has not assessed the claims made on this website. The
+                products referenced should not be considered tools for diagnosis, treatment, cure, or prevention of any
+                disease. The material provided is for informational purposes and does not replace the advice of a
+                medical professional. We recommend speaking with a doctor regarding your specific needs. Results are not
+                typical for everyone.</p>
+            <p>Disclosure: This platform is designed for marketing purposes. The site owner may have financial
+                relationships with some of the products or services mentioned and stands to receive monetary
+                compensation when sales occur through our links.</p>
+            <p>Advertorial Warning: This is an advertorial and not a news article, not independent journalism. Any
+                people featured in images are professional models used for demonstration only. Our role is strictly to
+                provide information and opportunities for product comparison.</p>
+            <p>© Research 2026. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Dynamic date
+        const now = new Date();
+        const mm = String(now.getMonth() + 1).padStart(2, '0');
+        const dd = String(now.getDate()).padStart(2, '0');
+        const yyyy = now.getFullYear();
+        document.getElementById('current-date').textContent = mm + '/' + dd + '/' + yyyy;
+    </script>
+    <script>
+        // Countdown Timer
+        function updateTimer(e) {
+            var t = parseInt(e.dataset.time, 10),
+                r = setInterval(function () {
+                    if (t <= 0) return clearInterval(r), void (e.innerHTML = "00:00");
+                    var n = Math.floor(t / 60),
+                        o = t % 60,
+                        i = ("0" + n).slice(-2) + ":" + ("0" + o).slice(-2);
+                    e.innerHTML = i, t--
+                }, 1e3);
+        }
+        var timerElements = document.querySelectorAll(".timer");
+        for (var i = 0; i < timerElements.length; i++) updateTimer(timerElements[i]);
+    </script>
+    <script>
+        const basePath = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/');
+        document.querySelectorAll('[data-image]').forEach(el => {
+          const file = el.getAttribute('data-image');
+          el.dataset.image = basePath + file;
+        });
+    </script>
+
+
+</body></html>
