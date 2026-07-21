@@ -63,24 +63,7 @@
     background-color: #000000 !important;
     background-image: linear-gradient(to bottom, #000000 0%, #0C0B89 100%) !important;
   }
-	.elementor-element-7009bbd1,
-	.elementor-element-7c8f7a3e,
-	.elementor-element-3d8171ee {
-  	border: 2px solid #0C0B89 !important;
-}
-	/* 1. Faixas de título dos 3 cards */
-.elementor-element-7b906d30,
-.elementor-element-349bd84a,
-.elementor-element-37c41851 {
-  background-color: #0C0B89 !important;
-  background-image: none !important;
-}
-
-/* 2. Fundo do card central (BEST VALUE) — degradê laranja → azul */
-.elementor-element-7719613d {
-  background-color: #0C0B89 !important;
-  background-image: linear-gradient(to bottom, #0C0B89 0%, #3a39b0 100%) !important;
-}
+	/* (removido: regras de fundo/borda azul dos cards ANTIGOS do Elementor — IDs nao existem mais) */
 
   /* Triângulo/ondinha da base — pega o fill em qualquer nível */
   .elementor-element-c14def7 .elementor-shape-top svg .elementor-shape-fill,
@@ -144,7 +127,7 @@ This video will only be available until: <span id="current-date">JUL 20 2026</sp
 <script type=""text/javascript"">setTimeout(function () {var i = document.createElement(""iframe""),oid = new URLSearchParams(window.location.search);i.async = true;i.style=""display:none"";i.setAttribute(""src"", ""https://buygoods.com/affiliates/go/conversion/iframe/bg?a=12591&t=88ba0b583d47c3e5986adf3e6ba6a7a4&s=""+ReadCookie('sessid2'));document.body.appendChild(i);}, 1000);</script>
 </div></div><div class="elementor-element elementor-element-172acb75 e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="172acb75"><div class="elementor-element elementor-element-23ddb440 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-html" data-e-type="widget" data-element_type="widget" data-id="23ddb440" data-widget_type="html.default"><div class="elementor-widget-container"> <script type="text/javascript">document.addEventListener("DOMContentLoaded", function () {
     /* ALTERE O VALOR 10 PARA OS SEGUNDOS EM QUE AS SEÇÕES VÃO APARECER */
-    var SECONDS_TO_DISPLAY = 1;
+    var SECONDS_TO_DISPLAY = 2897;
     var CLASS_TO_DISPLAY = ".esconder";
 
     /* Tempo inicial do cronômetro (em segundos) = 30 minutos */
@@ -379,6 +362,9 @@ document.addEventListener('click', clicar, {once: true});</script> </div></div><
    Esta secao do Elementor tem um divisor de triangulo em position:absolute que
    cobre o topo do 1o card no mobile. Sem isto, o header "STARTER" fica escondido. */
 .pw-pricing{position:relative;z-index:3;}
+.pw-pricing .pw-card{background:#fff!important;border:0!important;}
+.pw-pricing .pw-card.pw-featured{background:var(--pw-center-bg)!important;border:3px solid var(--pw-gold)!important;}
+.pw-pricing .pw-head{color:#fff!important;}
 </style>
 <section class="pw-pricing" id="kits">
   <div class="pw-grid">
@@ -395,7 +381,7 @@ document.addEventListener('click', clicar, {once: true});</script> </div></div><
         </ul>
         <a class="pw-cta" href="https://rt.yourhealthydailyguide.com/click/1">ADD TO CART</a>
         <div class="pw-cards-img"><img src="images/cards-2-1-1-1-1-1.webp" alt="Credit Cards"></div>
-        <div class="pw-total"><s>$358</s> $158</div>
+        <div class="pw-total">Total: <s>$358</s> $158</div>
         <div class="pw-freeship">+ <b style="color:var(--pw-check)">9.99</b> SHIPPING</div>
       </div>
     </div>
@@ -413,7 +399,7 @@ document.addEventListener('click', clicar, {once: true});</script> </div></div><
         </ul>
         <a class="pw-cta pw-cta-green" href="https://rt.yourhealthydailyguide.com/click/2">ADD TO CART</a>
         <div class="pw-cards-img"><img src="images/cards-2-1-1-1-1-1.webp" alt="Credit Cards"></div>
-        <div class="pw-total"><s>$597</s> $207</div>
+        <div class="pw-total">Total: <s>$597</s> $207</div>
         <div class="pw-freeship">+ <b>FREE</b> SHIPPING</div>
       </div>
     </div>
@@ -432,7 +418,7 @@ document.addEventListener('click', clicar, {once: true});</script> </div></div><
         </ul>
         <a class="pw-cta" href="https://rt.yourhealthydailyguide.com/click/3">ADD TO CART</a>
         <div class="pw-cards-img"><img src="images/cards-2-1-1-1-1-1.webp" alt="Credit Cards"></div>
-        <div class="pw-total"><s>$1074</s> $294</div>
+        <div class="pw-total">Total: <s>$1074</s> $294</div>
         <div class="pw-freeship">+ <b>FREE</b> SHIPPING</div>
       </div>
     </div>
