@@ -558,123 +558,124 @@
 
       <img src="images/separador.svg" alt="" class="separador center z10" id="#kits">
 
-      <section class="area-kits pd" id="kits">
-        <div class="container center">
-          <ul>
-            <li class="kit-option k1">
-              <a href="https://rt.yourhealthydailyguide.com/click/1">
-                <div class="header">Starter</div>
+      <style>
+/* PRICING CARDS (prefixo pw- para não colidir com o style.css do site) */
+.pw-pricing{
+  --pw-navy-a:#000000; --pw-navy-b:#0C0B89;
+  --pw-gold:#e6b400;
+  --pw-yellow-a:#f7d34e; --pw-yellow-b:#e0a500;
+  --pw-green-a:#57c157; --pw-green-b:#3d9a3d;
+  --pw-ink:#1a1a1a; --pw-red:#d93636; --pw-check:#e08a00;
+  --pw-center-bg:#c7d6ef;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  box-sizing:border-box; padding:40px 16px 20px;
+}
+.pw-pricing *{box-sizing:border-box;}
+.pw-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:20px;align-items:start;}
+.pw-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px -12px rgba(0,0,0,.22);display:flex;flex-direction:column;}
+.pw-card.pw-featured{border:3px solid var(--pw-gold);background:var(--pw-center-bg);transform:translateY(-16px);box-shadow:0 24px 44px -16px rgba(12,11,137,.35);}
+.pw-head{background:linear-gradient(180deg,var(--pw-navy-a) 0%,var(--pw-navy-b) 100%);color:#fff;text-align:center;padding:18px 16px 16px;}
+.pw-card.pw-featured .pw-head{padding:22px 16px 18px;}
+.pw-head .pw-title{font-size:22px;font-weight:800;letter-spacing:.3px;line-height:1.05;text-transform:uppercase;}
+.pw-card.pw-featured .pw-head .pw-title{font-size:26px;}
+.pw-subline{text-align:center;font-size:15px;font-weight:800;color:#111;padding:14px 16px 0;text-transform:uppercase;}
+.pw-body{padding:6px 20px 22px;display:flex;flex-direction:column;flex:1;}
+.pw-bottle{min-height:180px;display:flex;align-items:center;justify-content:center;margin:8px 0 6px;}
+.pw-bottle img{max-width:100%;max-height:220px;object-fit:contain;display:block;}
+.pw-price{text-align:center;margin:6px 0 10px;line-height:1;color:var(--pw-ink);}
+.pw-price .pw-cur{font-size:34px;font-weight:800;vertical-align:top;}
+.pw-price .pw-num{font-size:64px;font-weight:900;letter-spacing:-2px;}
+.pw-price .pw-cents{font-size:26px;font-weight:800;vertical-align:top;}
+.pw-price .pw-per{display:inline-block;text-align:left;font-size:14px;font-weight:700;color:#222;line-height:1.05;margin-left:2px;}
+.pw-list{list-style:none;margin:6px 0 0;padding:0;border-top:1px solid #d9d9d9;}
+.pw-list li{display:flex;align-items:flex-start;gap:9px;padding:11px 2px;border-bottom:1px dashed #cfcfcf;font-size:14px;font-weight:700;color:#333;}
+.pw-list li svg{flex:0 0 auto;width:18px;height:18px;margin-top:1px;}
+.pw-list li.pw-save{color:var(--pw-check);}
+.pw-check{fill:var(--pw-check);}
+.pw-check-dark{fill:#222;}
+.pw-total{text-align:center;font-size:16px;font-weight:800;color:#111;margin:14px 0 4px;}
+.pw-total s{color:var(--pw-red);font-weight:700;margin-right:6px;}
+.pw-cta{display:block;text-decoration:none;text-align:center;margin:14px 0 8px;padding:16px 18px;border-radius:10px;font-size:19px;font-weight:900;letter-spacing:.4px;color:#1a1a1a;text-transform:uppercase;background:linear-gradient(180deg,var(--pw-yellow-a),var(--pw-yellow-b));box-shadow:0 6px 0 rgba(0,0,0,.12);transition:transform .12s ease, box-shadow .12s ease;}
+.pw-cta:hover{transform:translateY(-2px);box-shadow:0 8px 0 rgba(0,0,0,.14);}
+.pw-cta.pw-cta-green{color:#fff;background:linear-gradient(180deg,var(--pw-green-a),var(--pw-green-b));}
+.pw-cards-img{display:flex;justify-content:center;margin:6px 0 2px;}
+.pw-cards-img img{max-width:190px;height:auto;display:block;}
+.pw-freeship{text-align:center;font-size:13px;font-weight:800;color:#111;margin-top:8px;}
+.pw-freeship b{color:var(--pw-green-b);}
+.pw-medals{display:flex;justify-content:center;margin:26px auto 0;}
+.pw-medals img{max-width:640px;width:100%;height:auto;}
+@media (max-width:820px){.pw-grid{grid-template-columns:1fr;max-width:420px;gap:26px;}.pw-card.pw-featured{transform:none;}
+  /* ordem no MOBILE: 3 potes, 6 potes, 2 potes (desktop continua 2,3,6) */
+  .pw-grid>.pw-card:nth-child(1){order:3;}
+  .pw-grid>.pw-card:nth-child(2){order:1;}
+  .pw-grid>.pw-card:nth-child(3){order:2;}}
 
-                <div class="main">
-                  <strong>2 BOTTLES</strong>
-                  <span class="days">60 Day Supply</span>
-                  <div class="area-img">
-                    <img src="images/2 bottles.png" alt="2 Bottles">
-                  </div>
-                </div>
+/* --- ADICAO desta pagina (nao existe no bloco original) ---
+   Esta secao do Elementor tem um divisor de triangulo em position:absolute que
+   cobre o topo do 1o card no mobile. Sem isto, o header "STARTER" fica escondido. */
+.pw-pricing{position:relative;z-index:3;}
+.pw-pricing .pw-card{background:#fff!important;border:0!important;}
+.pw-pricing .pw-card.pw-featured{background:var(--pw-center-bg)!important;border:3px solid #2e4bc7!important;}
+.pw-pricing .pw-head{color:#fff!important;}
+</style>
+<section class="pw-pricing" id="kits">
+  <div class="pw-grid">
 
-                <div class="footer">
-                  <div class="price">
-                    <strong>$79<small>.98</small></strong> / bottle
-                  </div>
-                  <ul>
-                    <li class="orrivi">FREE BONUSES!</li>
-                    <li class="orrivi">FAST SHIPPING</li>
-                    <li class="orrivi">FREE SHIPPING</li>
-                  </ul>
-                  <button class="button">
-                    <img src="images/button.webp" alt="Add To Cart">
-                  </button>
-                  <img src="images/card.png" alt="Credit Cards" class="bandeiras">
+    <div class="pw-card">
+      <div class="pw-head"><div class="pw-title">Try Two</div></div>
+      <div class="pw-subline">60 Days Supply</div>
+      <div class="pw-body">
+        <div class="pw-bottle"><img src="images/2 bottles.png" alt="2 Bottles"></div>
+        <div class="pw-price"><span class="pw-cur">$</span><span class="pw-num">79</span><span class="pw-per">per<br>bottle</span></div>
+        <ul class="pw-list">
+          <li class="pw-save"><svg viewBox="0 0 512 512"><path class="pw-check" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200s-89.5 200-200 200S56 366.5 56 256 145.5 56 256 56m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-.1l-22.7 22.5c-4.7 4.7-4.7 12.3-.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17 .1L396.3 203.3c4.7-4.7 4.7-12.3.1-17z"/></svg>YOU SAVE $200</li>
+          <li><svg viewBox="0 0 512 512"><path class="pw-check-dark" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200s-89.5 200-200 200S56 366.5 56 256 145.5 56 256 56m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-.1l-22.7 22.5c-4.7 4.7-4.7 12.3-.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17 .1L396.3 203.3c4.7-4.7 4.7-12.3.1-17z"/></svg>90 DAYS GUARANTEE</li>
+        </ul>
+        <a class="pw-cta" href="https://rt.yourhealthydailyguide.com/click/1">ADD TO CART</a>
+        <div class="pw-cards-img"><img src="images/card.png" alt="Credit Cards"></div>
+        <div class="pw-total">Total: <s>$358</s> $158</div>
+        <div class="pw-freeship">+ <b style="color:var(--pw-check)">9.99</b> SHIPPING</div>
+      </div>
+    </div>
 
-                  <div class="valores dk">
-                    <span>Total: <s>358</s> $159<small>.96</small></span>
-                  </div>
-                </div>
-              </a>
-            </li>
+    <div class="pw-card pw-featured">
+      <div class="pw-head"><div class="pw-title">Best Offer!</div></div>
+      <div class="pw-subline">90 Days Supply</div>
+      <div class="pw-body">
+        <div class="pw-bottle"><img src="images/3 bottles.png" alt="3 Bottles"></div>
+        <div class="pw-price"><span class="pw-cur">$</span><span class="pw-num">69</span><span class="pw-per">per<br>bottle</span></div>
+        <ul class="pw-list">
+          <li class="pw-save"><svg viewBox="0 0 512 512"><path class="pw-check" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200s-89.5 200-200 200S56 366.5 56 256 145.5 56 256 56m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-.1l-22.7 22.5c-4.7 4.7-4.7 12.3-.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17 .1L396.3 203.3c4.7-4.7 4.7-12.3.1-17z"/></svg>YOU SAVE $390</li>
+          <li><svg viewBox="0 0 512 512"><path class="pw-check-dark" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200s-89.5 200-200 200S56 366.5 56 256 145.5 56 256 56m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-.1l-22.7 22.5c-4.7 4.7-4.7 12.3-.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17 .1L396.3 203.3c4.7-4.7 4.7-12.3.1-17z"/></svg>90 DAYS GUARANTEE</li>
+          <li><svg viewBox="0 0 512 512"><path class="pw-check-dark" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200s-89.5 200-200 200S56 366.5 56 256 145.5 56 256 56m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-.1l-22.7 22.5c-4.7 4.7-4.7 12.3-.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17 .1L396.3 203.3c4.7-4.7 4.7-12.3.1-17z"/></svg>SPECIAL BONUSES</li>
+        </ul>
+        <a class="pw-cta pw-cta-green" href="https://rt.yourhealthydailyguide.com/click/2">ADD TO CART</a>
+        <div class="pw-cards-img"><img src="images/card.png" alt="Credit Cards"></div>
+        <div class="pw-total">Total: <s>$597</s> $207</div>
+        <div class="pw-freeship">+ <b>FREE</b> SHIPPING</div>
+      </div>
+    </div>
 
-            <li class="kit-option best-option">
-              <a href="https://rt.yourhealthydailyguide.com/click/3">
-                <div class="header">Best Seller</div>
-
-                <div class="main">
-                  <strong>6 BOTTLES</strong>
-                  <span class="days">180 Day Supply</span>
-                  <div class="area-img">
-                    <img src="images/free.svg" alt="" class="frete">
-                    <img src="images/6 bottles.png" alt="6 Bottles">
-                    <div class="save">
-                      <b>Save $774<small>.12</small></b>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="footer">
-                  <div class="price">
-                    <strong>$49<small>.98</small></strong> / bottle
-                  </div>
-
-                  <ul>
-                    <li>2 FREE BONUSES!</li>
-                    <li>FAST & FREE SHIPPING</li>
-                    <li>60 DAYS GUARANTEE</li>
-                  </ul>
-                  <button class="button">
-                    <img src="images/button.webp" alt="Add To Cart"><img src="images/cursor.png" alt="" class="cursor">
-                  </button>
-
-                  <img src="images/card.png" alt="Credit Cards" class="bandeiras">
-
-                  <div class="valores dk">
-                    <span>Total: <s>1074</s> $299<small>.88</small></span>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="kit-option k3">
-              <a href="https://rt.yourhealthydailyguide.com/click/2">
-                <div class="header">Standard</div>
-
-                <div class="main">
-                  <strong>3 BOTTLES</strong>
-                  <span class="days">90 Day Supply</span>
-                  <div class="area-img">
-                    <img src="images/free.svg" alt="" class="frete">
-                    <img src="images/3 bottles.png" alt="3 Bottles">
-                    <div class="save">
-                      <b>Save $327<small>.06</small></b>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="footer">
-                  <div class="price">
-                    <strong>$69<small>.98</small></strong> / bottle
-                  </div>
-
-                  <ul>
-                    <li class="orrivi">FREE BONUSES!</li>
-                    <li class="morromeno">FAST & FREE SHIPPING</li>
-                    <li>60 DAYS GUARANTEE</li>
-                  </ul>
-                  <button class="button">
-                    <img src="images/button.webp" alt="Add To Cart">
-                  </button>
-                  <img src="images/card.png" alt="Credit Cards" class="bandeiras">
-
-                  <div class="valores dk">
-                    <span>Total: <s>537</s> $209<small>.94</small></span>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
-
-          <img src="images/medalhas.png" alt="" class="medalhas">
-        </div>
-      </section>
+    <div class="pw-card">
+      <div class="pw-head"><div class="pw-title">Good Value</div></div>
+      <div class="pw-subline">180 Days Supply</div>
+      <div class="pw-body">
+        <div class="pw-bottle"><img src="images/6 bottles.png" alt="6 Bottles"></div>
+        <div class="pw-price"><span class="pw-cur">$</span><span class="pw-num">49</span><span class="pw-per">per<br>bottle</span></div>
+        <ul class="pw-list">
+          <li class="pw-save"><svg viewBox="0 0 512 512"><path class="pw-check" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200s-89.5 200-200 200S56 366.5 56 256 145.5 56 256 56m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-.1l-22.7 22.5c-4.7 4.7-4.7 12.3-.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17 .1L396.3 203.3c4.7-4.7 4.7-12.3.1-17z"/></svg>YOU SAVE $780</li>
+          <li><svg viewBox="0 0 512 512"><path class="pw-check-dark" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200s-89.5 200-200 200S56 366.5 56 256 145.5 56 256 56m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-.1l-22.7 22.5c-4.7 4.7-4.7 12.3-.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17 .1L396.3 203.3c4.7-4.7 4.7-12.3.1-17z"/></svg>90 DAYS GUARANTEE</li>
+          <li><svg viewBox="0 0 512 512"><path class="pw-check-dark" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200s-89.5 200-200 200S56 366.5 56 256 145.5 56 256 56m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-.1l-22.7 22.5c-4.7 4.7-4.7 12.3-.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17 .1L396.3 203.3c4.7-4.7 4.7-12.3.1-17z"/></svg>BIGGEST DISCOUNT</li>
+          <li><svg viewBox="0 0 512 512"><path class="pw-check-dark" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200s-89.5 200-200 200S56 366.5 56 256 145.5 56 256 56m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-.1l-22.7 22.5c-4.7 4.7-4.7 12.3-.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17 .1L396.3 203.3c4.7-4.7 4.7-12.3.1-17z"/></svg>SPECIAL BONUSES</li>
+        </ul>
+        <a class="pw-cta" href="https://rt.yourhealthydailyguide.com/click/3">ADD TO CART</a>
+        <div class="pw-cards-img"><img src="images/card.png" alt="Credit Cards"></div>
+        <div class="pw-total">Total: <s>$1074</s> $294</div>
+        <div class="pw-freeship">+ <b>FREE</b> SHIPPING</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
