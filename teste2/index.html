@@ -1482,10 +1482,14 @@
 .pw-freeship b{color:#FFA300;}
 .pw-medals{display:flex;justify-content:center;margin:26px auto 0;}
 .pw-medals img{max-width:640px;width:100%;height:auto;}
+.pw-grid>.pw-card:nth-child(1){order:3;}
+.pw-grid>.pw-card:nth-child(2){order:1;}
+.pw-grid>.pw-card:nth-child(3){order:2;}
 @media (max-width:820px){.pw-grid{grid-template-columns:1fr;max-width:420px;gap:26px;}.pw-card.pw-featured{transform:none;}
+  /* ordem no MOBILE: 6 potes, 3 potes, 2 potes (desktop: 3,6,2) */
   .pw-grid>.pw-card:nth-child(1){order:3;}
   .pw-grid>.pw-card:nth-child(2){order:2;}
-  .pw-grid>.pw-card:nth-child(3){order:3;}}
+  .pw-grid>.pw-card:nth-child(3){order:1;}}
 .pw-pricing{position:relative;z-index:3;}
 .pw-pricing .pw-card{background:#fff!important;border:0!important;}
 .pw-pricing .pw-card.pw-featured{background:var(--pw-center-bg)!important;border:3px solid #2e4bc7!important;}
